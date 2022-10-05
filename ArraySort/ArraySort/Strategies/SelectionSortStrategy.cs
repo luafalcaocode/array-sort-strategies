@@ -2,7 +2,7 @@
 
 namespace ArraySort.Strategies
 {
-    public class SelectionSortStrategy : AbstractSwap, ISortStrategy
+    public class SelectionSortStrategy : ISortStrategy
     {
         public void Sort<T>(T[] array) where T : IComparable
         {
@@ -18,15 +18,8 @@ namespace ArraySort.Strategies
                         minValue = array[j];
                     }
                 }
-                Swap(array, i, minIndex);
+                Swapping.Swap(array, i, minIndex);
             }
-        }
-
-        public void Swap<T>(T[] array, int first, int second)
-        {
-            T temp = array[first];
-            array[first] = array[second];
-            array[second] = temp;
         }
     }
 }

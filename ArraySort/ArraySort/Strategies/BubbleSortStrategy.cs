@@ -2,7 +2,7 @@
 
 namespace ArraySort.Strategies
 {
-    public class BubbleSortStrategy : AbstractSwap, ISortStrategy
+    public class BubbleSortStrategy : ISortStrategy
     {
         public void Sort<T>(T[] array) where T : IComparable
         {
@@ -15,7 +15,7 @@ namespace ArraySort.Strategies
                     if (array[j].CompareTo(array[j + 1]) > 0)
                     {
                         isAnyChange = true;
-                        Swap(array, j, j + 1);
+                        Swapping.Swap(array, j, j + 1);
                     }
                 }
 

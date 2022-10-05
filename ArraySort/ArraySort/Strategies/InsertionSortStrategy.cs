@@ -2,7 +2,7 @@
 
 namespace ArraySort.Strategies
 {
-    public class InsertionSortStrategy : AbstractSwap, ISortStrategy
+    public class InsertionSortStrategy : ISortStrategy
     {
         public void Sort<T>(T[] array) where T : IComparable
         {
@@ -11,7 +11,7 @@ namespace ArraySort.Strategies
                 int j = i;
                 while (j > 0 && array[j].CompareTo(array[j - 1]) < 0)
                 {
-                    Swap(array, j, j - 1);
+                    Swapping.Swap(array, j, j - 1);
                     j--;
                 }
             }

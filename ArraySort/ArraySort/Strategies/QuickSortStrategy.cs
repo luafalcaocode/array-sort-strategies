@@ -2,7 +2,7 @@
 
 namespace ArraySort.Strategies
 {
-    public class QuickSortStrategy : AbstractSwap, ISortStrategy
+    public class QuickSortStrategy : ISortStrategy
     {
         public void Sort<T>(T[] array) where T : IComparable
         {
@@ -34,7 +34,7 @@ namespace ArraySort.Strategies
 
                 if (i >= j) break;
 
-                Swap(array, i, j);
+                Swapping.Swap(array, i, j);
             }
             while (i <= j);
             return j;
