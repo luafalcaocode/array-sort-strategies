@@ -45,8 +45,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategies\AbstractSwap.cs" />
     <Compile Include="Strategies\ArraySortContext.cs" />
-    <Compile Include="Strategies\ArraySortStrategy.cs" />
+    <Compile Include="Strategies\ISortStrategy.cs" />
     <Compile Include="Strategies\BubbleSortStrategy.cs" />
     <Compile Include="Strategies\InsertionSortStrategy.cs" />
     <Compile Include="Strategies\QuickSortStrategy.cs" />

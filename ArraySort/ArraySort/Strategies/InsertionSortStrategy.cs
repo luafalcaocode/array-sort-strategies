@@ -1,8 +1,10 @@
-﻿namespace ArraySort.Strategies
+﻿using System;
+
+namespace ArraySort.Strategies
 {
-    public class InsertionSortStrategy : ArraySortStrategy
+    public class InsertionSortStrategy : AbstractSwap, ISortStrategy
     {
-        public override void Sort<T>(T[] array)
+        public void Sort<T>(T[] array) where T : IComparable
         {
             for (int i = 1; i < array.Length; i++)
             {

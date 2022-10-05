@@ -2,9 +2,9 @@
 
 namespace ArraySort.Strategies
 {
-    public class QuickSortStrategy : ArraySortStrategy
+    public class QuickSortStrategy : AbstractSwap, ISortStrategy
     {
-        public override void Sort<T>(T[] array)
+        public void Sort<T>(T[] array) where T : IComparable
         {
             Sort(array, 0, array.Length - 1);
         }

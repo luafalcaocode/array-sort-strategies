@@ -1,8 +1,10 @@
-﻿namespace ArraySort.Strategies
+﻿using System;
+
+namespace ArraySort.Strategies
 {
-    public class SelectionSortStrategy : ArraySortStrategy
+    public class SelectionSortStrategy : AbstractSwap, ISortStrategy
     {
-        public override void Sort<T>(T[] array)
+        public void Sort<T>(T[] array) where T : IComparable
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
@@ -18,6 +20,13 @@
                 }
                 Swap(array, i, minIndex);
             }
+        }
+
+        public void Swap<T>(T[] array, int first, int second)
+        {
+            T temp = array[first];
+            array[first] = array[second];
+            array[second] = temp;
         }
     }
 }
