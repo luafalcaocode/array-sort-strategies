@@ -4,14 +4,14 @@ namespace ArraySort.Strategies
 {
     public class ArraySortContext
     {
-        private ArraySortStrategy arraySortStrategy;
+        private ISortStrategy arraySortStrategy;
 
-        public ArraySortContext(ArraySortStrategy strategy)
+        public ArraySortContext(ISortStrategy strategy)
         {
             this.arraySortStrategy = strategy;
         }
 
-        public void SetStrategy(ArraySortStrategy strategy)
+        public void SetStrategy(ISortStrategy strategy)
         {
             this.arraySortStrategy = strategy;
         }
